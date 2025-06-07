@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        body {
+            background-color: #0a1128;
+            color: #d1d5db;
+            font-family: 'Roboto', sans-serif;
+        }
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #2dd4bf;
+        }
+        .skill-bar {
+            background-color: #374151;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .skill-level {
+            background-color: #2dd4bf;
+            height: 100%;
+            transition: width 0.6s ease-in-out;
+        }
+        .card {
+            background-color: #1f2a44;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-[#0a1128] shadow-md fixed w-full top-0 z-10">
+        <div class="section flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold text-white">Zachary Janssen</h1>
+            <div class="space-x-8">
+                <a href="#about" class="nav-link text-gray-300 hover:text-teal-400">About</a>
+                <a href="#experience" class="nav-link text-gray-300 hover:text-teal-400">Experience</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-teal-400">Projects</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-teal-400">Skills</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-teal-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section pt-24">
+        <h2 class="text-3xl font-bold mb-6 text-white">About Me</h2>
+        <div class="card">
+            <p class="text-gray-300 leading-relaxed">
+                Experienced IT technician with 7+ years of providing end-user support and troubleshooting. Well-regarded for delivering exceptional customer service and consistently earning high customer satisfaction ratings. Highly motivated and proactive in improving business processes and delivering a high-quality customer experience.
+
+                Proficient in Python for automating business processes and pulling in data from SQL databases. Adept at using pandas for data manipulation and analysis, creating insightful charts and visualizations to drive data-driven decision-making. Strong background in developing efficient and scalable solutions to streamline workflows and enhance operational efficiency.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="text-3xl font-bold mb-6 text-white">Experience</h2>
+        <div class="space-y-6">
+            <div class="card">
+                <h3 class="text-xl font-medium text-white">Deskside Support Technician - NPO USA</h3>
+                <p class="text-gray-400 text-sm">Jan 2020 - Present</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
+                    <li>Troubleshoot Windows & MacOS laptops/desktops, various paper/label printers, mobile phones and barcode scanners.</li>
+                    <li>Created a web app utilizing ServiceNOW APIs, Django & NGINX so shop-floor operators can create tickets in ServiceNOW.</li>
+                    <li>Built a web app in Python using Flask & a MySQL database, so that future shortags can be tracked in the kitting areas</li>
+                    <li>Write Python tools for various departments that need to utilize speed of programming as compared to traditional tools. 
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-xl font-medium text-white">IT Field Technician - Caterpillar Inc.</h3>
+                <p class="text-gray-400 text-sm">Jun 2019 - Dec 2019</p>
+                <ul class="list-disc list-inside text-gray-300 mt-2">
+                    <li>Provided level 2 support for onsite and remote users</li>
+                    <li>Managed tickets in ServiceNOW</li>
+                    <li>Ordered and replaced Dell parts from Tech Direct</li>
+                    <li>Built and installed Cisco IP Phones</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="text-3xl font-bold mb-6 text-white">Projects</h2>
+        <div class="space-y-6">
+            <div class="card">
+                <h3 class="text-xl font-medium text-white">Static Website</h3>
+                <p class="text-gray-400 text-sm">AWS, S3</p>
+                <p class="text-gray-300 mt-2">
+                    Static website hosted in S3 - expanding project to include other AWS services in the future
+                </p>
+                <a href="https://github.com/pidgu91" class="text-teal-400 hover:underline mt-2 inline-block">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3 class="text-xl font-medium text-white">E-Commerce Platform</h3>
+                <p class="text-gray-400 text-sm">Django, PostgreSQL, Tailwind CSS | 2022</p>
+                <p class="text-gray-300 mt-2">
+                    Developed a scalable e-commerce platform with payment integration and inventory management. 
+                    Optimized database queries to reduce page load times by 25%.
+                </p>
+                <a href="https://github.com/pidgu91" class="text-teal-400 hover:underline mt-2 inline-block">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="text-3xl font-bold mb-6 text-white">Skills</h2>
+        <div class="space-y-4">
+            <div>
+                <p class="text-gray-300">Customer Support</p>
+                <div class="skill-bar">
+                    <div class="skill-level w-[90%]"></div>
+                </div>
+            </div>
+            <div>
+                <p class="text-gray-300">Problem Solving</p>
+                <div class="skill-bar">
+                    <div class="skill-level w-[85%]"></div>
+                </div>
+            </div>
+            <div>
+                <p class="text-gray-300">AWS</p>
+                <div class="skill-bar">
+                    <div class="skill-level w-[80%]"></div>
+                </div>
+            </div>
+            <div>
+                <p class="text-gray-300">Python</p>
+                <div class="skill-bar">
+                    <div class="skill-level w-[75%]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="text-3xl font-bold mb-6 text-white">Contact</h2>
+        <div class="card">
+            <p class="text-gray-300">Email: <a href="mailto:zjanssen23@gmail.com" class="text-teal-400 hover:underline">zjanssen23@gmail.com</a></p>
+            <p class="text-gray-300">LinkedIn: <a href="https://www.linkedin.com/in/zachary-janssen-5aa50616b/" class="text-teal-400 hover:underline">https://www.linkedin.com/in/zachary-janssen-5aa50616b/</a></p>
+            <p class="text-gray-300">GitHub: <a href="https://github.com/pidgu91" class="text-teal-400 hover:underline">github.com/pidgu91</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a1128] py-4 text-center text-gray-400">
+        <p>© 2025 Zachary Janssen. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
